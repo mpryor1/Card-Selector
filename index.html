@@ -86,19 +86,7 @@
         var randomIndex = Math.round(larger)
         var randomCard = deck[randomIndex]
         var displayString = randomCard.value + " of " + randomCard.suit
-        document.getElementById("display").innerHTML = displayString
-        var imageSrc 
-        if (randomCard.value === 2) {
-          imageSrc = '2.png'
-        } else if (randomCard.value === 4) {
-          imageSrc = '4.png'
-        } else if (randomCard.value === 7) {
-          imageSrc = '7.jpg'
-        } else if (randomCard.value === 9) {
-          imageSrc = '9.jpg'
-        }
-        document.getElementById("card-basic").src = imageSrc
-        displayEle.innerHTML = displayString
+       displayEle.innerHTML = displayString
         var selectedCardIsCorrectValue = randomCard.value === selectedCard.value
         var SelectedCardIsCorrectSuit = randomCard.suit === selectedCard.suit
         if (selectedCardIsCorrectValue && selectedCardIsCorrectSuit) {
